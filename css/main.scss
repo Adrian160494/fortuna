@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Fascinate+Inline|Monoton');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Faster+One|Frijole');
+
+@mixin pageParameters(){
+  width:100%;
+  height:100%;
+  position: fixed;
+  background: #000;
+  z-index: 1003;
+}
+
+body{
+  width:100%;
+  height:100%;
+  background: url('../img/background.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .welcome-page{
+    @include pageParameters;
+    .welcome-text{
+      margin-top: 15%;
+      width: 100%;
+      color:white;
+      font-size:60px;
+    }
+    .numberPlayers{
+      color:white;
+    }
+    .buttons-welcome{
+      width: 100%;
+    }
+  }
+  .guess-password-site{
+    @include pageParameters;
+    border: 20px solid white;
+    display:none;
+    .guess-form{
+      width:100%;
+      margin-top: 20%;
+    }
+    #closeGuess{
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:white;
+      font-size:30px;
+      cursor:pointer;
+    }
+    .success{
+      border: 20px solid lightgreen;
+    }
+    .danger{
+      border: 20px solid red;
+    }
+  }
+  .winner-site{
+    @include pageParameters;
+    display:none;
+    .winner-welcome{
+      color:white;
+      font-size:30px;
+      width:300px;
+      height:200px;
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 150px);
+    }
+    #closeWinner{
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:white;
+      font-size:30px;
+      cursor:pointer;
+    }
+  }
+
+  .error-site{
+    @include pageParameters;
+    display:none;
+    .head{
+      position: absolute;
+      width: 500px;
+      height: 200px;
+      left: calc(50% - 250px);
+      top: calc(50% - 100px);
+      color: white;
+    }
+    #closeError{
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:white;
+      font-size:30px;
+      cursor:pointer;
+    }
+  }
+
+  .buy-site{
+    @include pageParameters;
+    display: none;
+    #closeBuy{
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:white;
+      font-size:30px;
+      cursor:pointer;
+    }
+    .buy-panel{
+      margin:20% 20%;
+    }
+  }
+  .site-title{
+    font-size:65px;
+    color:white;
+    letter-spacing: 6px;
+    width:100%;
+    height:20%;
+    font-family: 'Frijole', cursive;
+    text-transform: uppercase;
+  }
+  .container-mine{
+    position: absolute;
+    width:100%;
+
+    .managing-panel{
+      position: absolute;
+      width:150px;
+      top: 0;
+      right:0;
+      background: rgba(250,250,250,0.6);
+      z-index: 1001;
+      padding:10px;
+      .btn-circle{
+        border: 2px solid blue;
+        font-family: 'Bangers', cursive;
+        font-size:20px;
+        margin: 10px;
+        letter-spacing: 5px;
+        &:hover{
+          padding: 5px 20px;
+          transition: 1s all;
+        }
+      }
+      .input-letter{
+        border: 3px solid;
+        padding: 10px;
+        z-index:1002;
+      }
+
+      .btn-check{
+        margin: 5px;
+      }
+
+    }
+    .password-container{
+      width:100%;
+      height: 500px;
+      .fortune-password{
+        width:100%;
+        .password-block{
+          background: -webkit-linear-gradient(rgba(250,250,250,0.8),rgba(100,100,100,0.2),rgba(250,250,250,0.8));
+          border: 2px solid black;
+          height: 400px;
+          .typed-letters{
+            position: absolute;
+            width:400px;
+            height: 300px;
+            top: calc(50% - 150px);
+            left: calc(50% - 200px);
+          }
+        }
+      }
+      .fortune-circle{
+        width:100%;
+        .button-spin{
+          position: absolute;
+        }
+        .circle-fortune{
+          width:100%;
+          position: absolute;
+
+          img{
+            width: 100%;
+          }
+          .arrow{
+            position: absolute;
+            top:-20px;
+            left:calc(50% - 10px);
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .actualPriceBlock{
+      width:200px;
+      position: absolute;
+      left: calc(50% - 100px);
+      .actualPriceText{
+        left: calc(50% - 96px);
+        color:white;
+        font-size: 20px;
+        margin-top: 5px;
+        border: 4px solid white;
+        box-shadow: 0 20px 100px 30px rgba(250,250,250,0.3);
+        padding: 20px;
+        background: rgba(250,250,250,0.4);
+        &:hover{
+          background: rgba(250,250,250,0.9);
+          color:black;
+        }
+      }
+    }
+    .competitors{
+      width:100%;
+      position: fixed;
+      bottom:0;
+      color:white;
+      /*background: rgba(250,250,250,0.7);*/
+      .zoom-competitors{
+        position: absolute;
+        top:0;
+        right:0;
+      }
+      .player1Active{
+        color:white;
+        background: red;
+      }
+      .player2Active{
+        color:white;
+        background: blue;
+      }
+      .player3Active{
+        color:white;
+        background: green;
+      }
+      .player4Active{
+        color:white;
+        background: black;
+      }
+
+      .player1NotActive{
+        background: rgba(200,10,10,0.3);
+      }
+      .player2NotActive{
+        background: rgba(10,10,200,0.3);
+      }
+      .player3NotActive{
+        background: rgba(10,200,10,0.3);
+      }
+      .player4NotActive{
+        background: rgba(1,1,1,0.3);
+      }
+      .player1{
+        border: 4px solid red;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      .player2{
+        border: 4px solid blue;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      .player3{
+        border: 4px solid green;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      .player4{
+        border: 4px solid black;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+
+    }
+  }
+}
+
+.square{
+  width:25px;
+  height:35px;
+  border: 4px solid black;
+  background: -webkit-linear-gradient(black,gray);
+  float:left;
+  margin: 2px;
+  font-size:20px;
+}
+
+.circle-circle{
+  transform: rotate(360deg);
+  transition: 2s all;
+}
+
+.rotate0{
+  transform: rotate(15deg);
+  transition: 2s all;
+}
+.rotate1{
+  transform: rotate(30deg);
+  transition: 2s all;
+}
+.rotate2{
+  transform: rotate(45deg);
+  transition: 2s all;
+}
+.rotate3{
+  transform: rotate(60deg);
+  transition: 2s all;
+}
+.rotate4{
+  transform: rotate(75deg);
+  transition: 2s all;
+}
+.rotate5{
+  transform: rotate(90deg);
+  transition: 2s all;
+}
+.rotate6{
+  transform: rotate(105deg);
+  transition: 2s all;
+}
+.rotate7{
+  transform: rotate(120deg);
+  transition: 2s all;
+}.rotate8{
+   transform: rotate(135deg);
+   transition: 2s all;
+ }
+.rotate9{
+  transform: rotate(150deg);
+  transition: 2s all;
+}
+.rotate10{
+  transform: rotate(165deg);
+  transition: 2s all;
+}
+.rotate11{
+  transform: rotate(180deg);
+  transition: 2s all;
+}
+.rotate12{
+  transform: rotate(195deg);
+  transition: 2s all;
+}
+.rotate13{
+  transform: rotate(210deg);
+  transition: 2s all;
+}
+.rotate14{
+  transform: rotate(225deg);
+  transition: 2s all;
+}
+.rotate15{
+  transform: rotate(240deg);
+  transition: 2s all;
+}
+.rotate16{
+  transform: rotate(255deg);
+  transition: 2s all;
+}
+.rotate17{
+  transform: rotate(270deg);
+  transition: 2s all;
+}
+.rotate18{
+  transform: rotate(285deg);
+  transition: 2s all;
+}
+.rotate19{
+  transform: rotate(300deg);
+  transition: 2s all;
+}
+.rotate20{
+  transform: rotate(315deg);
+  transition: 2s all;
+}
+.rotate21{
+  transform: rotate(330deg);
+  transition: 2s all;
+}
+.rotate22{
+  transform: rotate(345deg);
+  transition: 2s all;
+}
+.rotate23{
+  transform: rotate(360deg);
+  transition: 2s all;
+}
+
+.checked{
+  border: 2px solid lightgreen;
+  background: greenyellow;
+}
+
+.discover{
+  transform: rotateY(360deg);
+  transition:1s all;
+}
+
+
+

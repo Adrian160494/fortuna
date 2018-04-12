@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+    <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="bootstrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="Angular/controlers/mainController.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Koło fortuny</title>
+</head>
+<body ng-controller="mainController">
+    <div id="statsPage">
+        <div class="container">
+
+        </div>
+    </div>
+    <div id="welcomePage" class="welcome-page text-center">
+        <p class="welcome-text text-center">Rozpocznij gre!!</p>
+        <p class="numberPlayers">Wybierz ilość graczy:</p>
+        <div class="buttons-welcome text-center">
+            <button class="btn btn-default" ng-click="choosePlayer(1)">1 player</button>
+            <button class="btn btn-default" ng-click="choosePlayer(2)">2 player</button>
+            <button class="btn btn-default" ng-click="choosePlayer(3)">3 player</button>
+            <button class="btn btn-default" ng-click="choosePlayer(4)">4 player</button>
+        </div>
+    </div>
+    <div id="guess-password-site" class="guess-password-site">
+        <span id="closeGuess" class="glyphicon glyphicon-remove" ng-click="closeGuess()"></span>
+        <div class="container">
+            <div class="guess-form">
+                <fieldset>
+                    <input type="text" class="form-control text-center" id="guess-input" placeholder="Zgaduje hasło!"/>
+                    <button class="btn btn-primary btn-block" ng-click="guessPasswordNow()">Zatwierdz</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="error-site">
+        <span id="closeError" class="glyphicon glyphicon-remove" ng-click="closeError()"></span>
+        <div class="head text-center">
+            <h1>Masz za mało pieniędzy!!!!</h1>
+            <button class="btn btn-primary" ng-click="closeError()">Ok</button>
+        </div>
+    </div>
+    <div class="winner-site">
+        <div class="winner-welcome text-center">
+            <h1>Runda {{numberRound}}</h1>
+            <h2>Wygrywa gracz : Player{{actualPlayer}}</h2>
+            <button class="btn btn-primary" ng-click="changeRound()">Rozpocznij następną runde!</button>
+        </div>
+    </div>
+    <div class="buy-site">
+        <span id="closeBuy" class="glyphicon glyphicon-remove" ng-click="closeBuy()"></span>
+        <div class="buy-panel">
+            <div class="panel">
+                <div class="panel-heading">
+                    <p>Czy chcesz kupic samogłoske za 200 zł?</p>
+                </div>
+                <div class="panel-body">
+                    <input type="text" class="form-control" id="bought-letter"/>
+                    <button class="btn btn-default btn-block" ng-click="checkBuyLetter()">Sprawdz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-title text-center">
+        <p>Koło fortuny</p>
+        <hr>
+    </div>
+   <div class="container-mine">
+
+       <div class="managing-panel text-center">
+            <p><button id="spin" class="btn btn-primary btn-block" ng-click="circle()">Spin</button></p>
+           <p><button id="check" class="btn btn-primary btn-block"  ng-click="checkLetter()">Sprawdz</button></p>
+           <p><button class="btn btn-primary btn-block" ng-click="guessPassword()">Zgaduje hasło</button></p>
+           <p><button class="btn btn-primary btn-block" ng-click="buyLetter()">Samogłoska</button> </p>
+           <p><input id="letter" type="text" class="text-center form-control input-letter" placeholder="Letter" /></p>
+           <hr>
+       </div>
+       <div class="col-md-12">
+          <div class="password-container">
+              <div class="col-md-6">
+                  <div class="fortune-password text-center">
+                      <div class="password-block">
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="fortune-circle">
+                      <div class="circle-fortune text-center">
+                          <div class="col-md-8">
+                              <span style="color:white;" class="glyphicon glyphicon-arrow-down arrow"></span>
+                              <img id="circleFortune" src="img/kolo.png" width="20%"/>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <div class="col-md-12">
+               <div class="col-md-6">
+                   <div class="actualPriceBlock">
+                       <p class="actualPriceText text-center">{{actualPrice}}</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div id="competitors" class="competitors">
+            <div ng-show="numberOfPlayers == 1 ? true : false">
+                <div class="col-md-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}} zł , Nagrody: {{player1Avard.material}}</div></div>';
+            </div>
+           <div ng-show="numberOfPlayers == 2 ? true : false">
+               <div class="col-md-12"><div class="col-md-6"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-6"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div></div>
+           </div>
+           <div ng-show="numberOfPlayers == 3 ? true : false">
+               <div class="col-md-12"><div class="col-md-4"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-4"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-4"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div></div>
+           </div>
+           <div ng-show="numberOfPlayers == 4 ? true : false">
+               <div class="col-md-12"><div class="col-md-3"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-3"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-3"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div><div class="col-md-3"><div class="player4 text-center">Player4 Pieniądze: {{player4Avard.money}}  zł , Nagrody: {{player4Avard.material}}</div></div></div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
