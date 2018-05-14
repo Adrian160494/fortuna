@@ -1,12 +1,116 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers|Fascinate+Inline|Monoton');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Faster+One|Frijole');
-
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 @mixin pageParameters(){
   width:100%;
   height:100%;
   position: fixed;
   background: #000;
   z-index: 1003;
+}
+
+@mixin boxTextSpec(){
+  @media screen and (max-width: 400px){
+    font-size:20px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 400px) and (max-width: 500px){
+    font-size:22px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px){
+    font-size:25px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    font-size:30px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size:40px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 1200px){
+    font-size:40px;
+    margin-top: 15%;
+  }
+}
+
+@mixin headerTextSpec(){
+  @media screen and (max-width: 400px){
+    font-size:20px;
+    margin-top: 5%;
+  }
+  @media screen and (min-width: 400px) and (max-width: 500px){
+    font-size:25px;
+    margin-top: 5%;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px){
+    font-size:30px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    font-size:40px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size:50px;
+    margin-top: 15%;
+  }
+  @media screen and (min-width: 1200px){
+    font-size:60px;
+    margin-top: 15%;
+  }
+}
+
+@mixin lettersParam(){
+  position: absolute;
+  background: black;
+  color:white;
+  padding:5px 20px;
+  border-radius:5px;
+  display:none;
+  @media screen and (max-width: 400px){
+    width: 350px;
+    height:234px;
+    top: calc(50% - 125px);
+    left: calc(50% - 175px);
+  }
+  @media screen and (min-width: 400px) and (max-width: 500px){
+    width: 400px;
+    height:240px;
+    top: calc(50% - 120px);
+    left: calc(50% - 200px);
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px){
+    width: 440px;
+    height:250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 220px);
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    width: 460px;
+    height:250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 230px);
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    width: 460px;
+    height:240px;
+    top: calc(50% + 80px);
+    left: calc(50% - 230px);
+  }
+  @media screen and (min-width: 1200px){
+    width: 600px;
+    height:250px;
+    left: calc(50% - 300px);
+    top: calc(50% + 80px);
+  }
+}
+
+@mixin fontParameter(){
+  font-family: 'Fredericka the Great', cursive;
 }
 
 body{
@@ -17,19 +121,408 @@ body{
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  .statsButton{
+    z-index:1001;
+    width: 60px;
+    height: 60px;
+    color:white;
+    background: black;
+    position: absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+    border-bottom-right-radius: 50px;
+    @media screen and (max-width: 400px){
+      width: 40px;
+      height: 40px;
+      font-size:20px;
+    }
+    @media screen and (min-width: 400px) and (max-width: 500px){
+      width: 40px;
+      height: 40px;
+      font-size:22px;
+    }
+    @media screen and (min-width: 500px) and (max-width: 768px){
+      width: 45px;
+      height: 45px;
+      font-size:24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      width: 50px;
+      height: 50px;
+      font-size:26px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      width: 55px;
+      height: 55px;
+      font-size:28px;
+    }
+    @media screen and (min-width: 1200px){
+      width: 60px;
+      height: 60px;
+      font-size:30px;
+    }
+    #statsImg{
+      position: absolute;
+      top:calc(50% - 20px);
+      left: calc(50% - 20px);
+    }
+    &:hover{
+      @media screen and (max-width: 400px){
+        width: 50px;
+        height: 50px;
+        font-size:20px;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        width: 50px;
+        height: 50px;
+        font-size:22px;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        width: 55px;
+        height: 55px;
+        font-size:24px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        width: 60px;
+        height: 60px;
+        font-size:26px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        width: 65px;
+        height: 65px;
+        font-size:28px;
+      }
+      @media screen and (min-width: 1200px){
+        width: 70px;
+        height: 70px;
+        font-size:30px;
+      }
+      transition: 1s all;
+    }
+  }
+  .newGameButton{
+    z-index:1001;
+    color:white;
+    background: black;
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:30px;
+    cursor:pointer;
+    border-bottom-left-radius: 50px;
+    @media screen and (max-width: 400px){
+      width: 40px;
+      height: 40px;
+      font-size:20px;
+    }
+    @media screen and (min-width: 400px) and (max-width: 500px){
+      width: 40px;
+      height: 40px;
+      font-size:22px;
+    }
+    @media screen and (min-width: 500px) and (max-width: 768px){
+      width: 45px;
+      height: 45px;
+      font-size:24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      width: 50px;
+      height: 50px;
+      font-size:26px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      width: 55px;
+      height: 55px;
+      font-size:28px;
+    }
+    @media screen and (min-width: 1200px){
+      width: 60px;
+      height: 60px;
+      font-size:30px;
+    }
+    #newGameImg{
+      position: absolute;
+      top:calc(50% - 20px);
+      right: calc(50% - 20px);
+    }
+    &:hover{
+      @media screen and (max-width: 400px){
+        width: 50px;
+        height: 50px;
+        font-size:20px;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        width: 50px;
+        height: 50px;
+        font-size:22px;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        width: 55px;
+        height: 55px;
+        font-size:24px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        width: 60px;
+        height: 60px;
+        font-size:26px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        width: 65px;
+        height: 65px;
+        font-size:28px;
+      }
+      @media screen and (min-width: 1200px){
+        width: 70px;
+        height: 70px;
+        font-size:30px;
+      }
+      transition: 1s all;
+    }
+  }
+
   .welcome-page{
+    display:block;
     @include pageParameters;
-    .welcome-text{
-      margin-top: 15%;
-      width: 100%;
-      color:white;
-      font-size:60px;
+    .welcomePageInfo{
+      text-align: center;
+      @media screen and (max-width: 400px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        position: absolute;
+        height: 230px;
+        padding:20px;
+        width: 300px;
+        top: calc(50% - 130px);
+        left: calc(50% - 150px);
+        border: 4px solid white;
+        box-shadow: 0 0 80px 3px white;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        position: absolute;
+        height: 260px;
+        padding:20px;
+        width: 400px;
+        top: calc(50% - 130px);
+        left: calc(50% - 200px);
+        border: 4px solid white;
+        box-shadow: 0 0 100px 3px white;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      .welcome-text{
+        @include headerTextSpec();
+        @include fontParameter();
+        width: 100%;
+        color:white;
+      }
+      .numberPlayers{
+        color:white;
+      }
+      .buttons-welcome{
+        width: 100%;
+      }
     }
-    .numberPlayers{
-      color:white;
+  }
+  .newGame-page{
+    display:none;
+    @include pageParameters;
+    .newGamePageInfo{
+      text-align: center;
+      @media screen and (max-width: 400px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        position: absolute;
+        height: 230px;
+        padding:20px;
+        width: 300px;
+        top: calc(50% - 130px);
+        left: calc(50% - 150px);
+        border: 4px solid white;
+        box-shadow: 0 0 80px 3px white;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        position: absolute;
+        height: 260px;
+        padding:20px;
+        width: 400px;
+        top: calc(50% - 130px);
+        left: calc(50% - 200px);
+        border: 4px solid white;
+        box-shadow: 0 0 100px 3px white;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      .newGame-text{
+        @include fontParameter();
+        @include boxTextSpec();
+
+        width: 100%;
+        color:white;
+      }
+      .button-newGame{
+
+      }
     }
-    .buttons-welcome{
-      width: 100%;
+  }
+  .winnerRoundsPage{
+    display:none;
+    @include pageParameters;
+    .winnerRoundsInfo{
+     p{
+        @include headerTextSpec();
+      }
+      text-align: center;
+      @media screen and (max-width: 400px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        position: absolute;
+        height: 230px;
+        padding:20px;
+        width: 300px;
+        top: calc(50% - 130px);
+        left: calc(50% - 150px);
+        border: 4px solid white;
+        box-shadow: 0 0 80px 3px white;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        position: absolute;
+        height: 260px;
+        padding:20px;
+        width: 400px;
+        top: calc(50% - 130px);
+        left: calc(50% - 200px);
+        border: 4px solid white;
+        box-shadow: 0 0 100px 3px white;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      .winnerStats{
+        color: white;
+        @include fontParameter();
+        h2{
+          @media screen and (max-width: 400px){
+            font-size:17px;
+          }
+          @media screen and (min-width: 400px) and (max-width: 500px){
+            font-size:21px;
+          }
+          @media screen and (min-width: 500px) and (max-width: 768px){
+            font-size:24px;
+          }
+          @media screen and (min-width: 768px) and (max-width: 992px){
+            font-size:26px;
+          }
+          @media screen and (min-width: 992px) and (max-width: 1200px){
+            font-size:28px;
+          }
+          @media screen and (min-width: 1200px){
+            font-size:30px;
+          };
+        }
+      }
+    }
+    .new_game{
+      display:none;
+    }
+    .final_game{
+
     }
   }
   .guess-password-site{
@@ -110,26 +603,256 @@ body{
       cursor:pointer;
     }
     .buy-panel{
-      margin:20% 20%;
+      .panel-buy{
+        @media screen and (max-width: 400px){
+          height: 140px;
+          width: 100%;
+          top: calc(50% - 70px);
+          position:relative;
+        }
+        @media screen and (min-width: 400px) and (max-width: 500px){
+          height: 140px;
+          width: 100%;
+          top: calc(50% - 70px);
+          position:relative;
+        }
+        @media screen and (min-width: 500px) and (max-width: 768px){
+          height: 160px;
+          width: 100%;
+          top: calc(50% - 80px);
+          position:relative;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px){
+          height: 200px;
+          width: 100%;
+          top: calc(50% - 100px);
+          position:relative;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+          height: 200px;
+          width: 100%;
+          top: calc(50% - 100px);
+          position:relative;
+        }
+        @media screen and (min-width: 1200px){
+          height: 200px;
+          width: 100%;
+          top: calc(50% - 100px);
+          position:relative;
+        }
+      }
+      @media screen and (max-width: 400px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        height: 200px;
+        padding:10px;
+        position:fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        position: absolute;
+        height: 230px;
+        padding:20px;
+        width: 300px;
+        top: calc(50% - 130px);
+        left: calc(50% - 150px);
+        border: 4px solid white;
+        box-shadow: 0 0 80px 3px white;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        position: absolute;
+        height: 260px;
+        padding:20px;
+        width: 400px;
+        top: calc(50% - 130px);
+        left: calc(50% - 200px);
+        border: 4px solid white;
+        box-shadow: 0 0 100px 3px white;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
+      @media screen and (min-width: 1200px){
+        position: absolute;
+        height: 340px;
+        padding:20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white;
+      }
     }
   }
-  .site-title{
-    font-size:65px;
+
+  .statsPage{
+    .statsHeader{
+      @include fontParameter;
+      @media screen and (max-width: 400px){
+        font-size:25px;
+        letter-spacing: 1px;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        font-size:25px;
+        letter-spacing: 1px;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        font-size:37px;
+        letter-spacing: 6px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        font-size:45px;
+        letter-spacing: 6px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        font-size:60px;
+        letter-spacing: 6px;
+      }
+      @media screen and (min-width: 1200px){
+        font-size:65px;
+        letter-spacing: 14px;
+      }
+    }
+    @include pageParameters;
+    display: none;
     color:white;
-    letter-spacing: 6px;
+    #closeStats{
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:white;
+      font-size:30px;
+      cursor:pointer;
+    }
+    .player-stats{
+      margin-top:100px;
+      margin-bottom:100px;
+      .playerStat{
+      }
+    }
+  }
+
+  .site-title{
+    position: absolute;
+    .site-title-text{
+      position: absolute;
+      background: rgba(10,10,10,0.5);
+      box-shadow: 0 2px 20px 1px white;
+      padding:10px;
+      border-bottom-right-radius: 120px;
+      border-bottom-left-radius: 120px;
+      @media screen and (max-width: 400px){
+        width: 300px;
+        left: calc(50% - 150px);
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        width: 300px;
+        left: calc(50% - 150px);
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        width: 500px;
+        left: calc(50% - 250px);
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        width: 550px;
+        left: calc(50% - 275px);
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        width: 700px;
+        left: calc(50% - 350px);
+      }
+      @media screen and (min-width: 1200px){
+        width: 800px;
+        left: calc(50% - 400px);
+      }
+    }
+    @media screen and (max-width: 400px){
+      font-size:25px;
+      letter-spacing: 1px;
+    }
+    @media screen and (min-width: 400px) and (max-width: 500px){
+      font-size:25px;
+      letter-spacing: 1px;
+    }
+    @media screen and (min-width: 500px) and (max-width: 768px){
+      font-size:37px;
+      letter-spacing: 6px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      font-size:45px;
+      letter-spacing: 6px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      font-size:60px;
+      letter-spacing: 6px;
+    }
+    @media screen and (min-width: 1200px){
+      font-size:65px;
+      letter-spacing: 14px;
+    }
+    color:white;
     width:100%;
-    height:20%;
-    font-family: 'Frijole', cursive;
+    font-family: 'Fredericka the Great', cursive;
     text-transform: uppercase;
   }
   .container-mine{
     position: absolute;
     width:100%;
-
+    @media screen and (max-width: 400px){
+      padding-top: 100px;
+    }
+    @media screen and (min-width: 400px) and (max-width: 500px){
+      padding-top: 100px;
+    }
+    @media screen and (min-width: 500px) and (max-width: 768px){
+      padding-top: 100px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      padding-top: 100px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      padding-top: 180px;
+    }
+    @media screen and (min-width: 1200px){
+      padding-top: 180px;
+    }
     .managing-panel{
+      @media screen and (max-width: 400px){
+        display:none;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:none;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:none;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:none;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:block;
+      }
+      @media screen and (min-width: 1200px){
+        display:block;
+      }
       position: absolute;
       width:150px;
-      top: 0;
+      top: 150px;
       right:0;
       background: rgba(250,250,250,0.6);
       z-index: 1001;
@@ -156,26 +879,292 @@ body{
       }
 
     }
+    .managing-panel-mobile{
+      @media screen and (max-width: 400px){
+        display:block;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:block;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:block;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:block;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:none;
+      }
+      @media screen and (min-width: 1200px){
+        display:none;
+      }
+      .btn-group{
+        button{
+          @media screen and (max-width: 400px){
+            font-size:12px;
+          }
+          @media screen and (min-width: 400px) and (max-width: 500px){
+            font-size:13px;
+          }
+          @media screen and (min-width: 500px) and (max-width: 768px){
+            font-size:14px;
+          }
+          @media screen and (min-width: 768px) and (max-width: 992px){
+            font-size:14px;
+          }
+        }
+        width:100%;
+        @media screen and (max-width: 400px){
+          width:314px;
+        }
+        @media screen and (min-width: 400px) and (max-width: 500px){
+          width: 331px;
+        }
+        @media screen and (min-width: 500px) and (max-width: 768px){
+          width:349px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px){
+          width:349px;
+        }
+      }
+      display:block;
+    }
+    .fortune-circle-mob{
+      @media screen and (max-width: 400px){
+        display:block;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:block;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:block;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:block;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:none;
+      }
+      @media screen and (min-width: 1200px){
+        display:none;
+      }
+      .button-spin{
+        position: absolute;
+      }
+      .circle-fortune{
+
+        img{
+          @media screen and (max-width: 400px){
+            width:80%;
+          }
+          @media screen and (min-width: 400px) and (max-width: 500px){
+            width:80%;
+          }
+          @media screen and (min-width: 500px) and (max-width: 768px){
+            width:60%;
+          }
+          @media screen and (min-width: 768px) and (max-width: 992px){
+            width:50%;
+          }
+          @media screen and (min-width: 992px) and (max-width: 1200px){
+            width:100%;
+          }
+          @media screen and (min-width: 1200px){
+            width:80%;
+          }
+        }
+        .arrow{
+          position: absolute;
+          top:-20px;
+          left:calc(50% - 10px);
+          font-size: 20px;
+        }
+      }
+      .letters-div{
+        .counter-circle{
+          width:8px;
+          height:8px;
+          border-radius: 100px;
+          background: white;
+          position: absolute;
+          top:0;
+          left: 34px;
+        }
+        .counter{
+          display:block;
+          position:absolute;
+          width:80px;
+          height:80px;
+          top: calc(50% - 40px);
+          left: 10px;
+          border:2px solid white;
+          border-radius: 100px;
+
+        }
+        @include lettersParam();
+        h3{
+          @media screen and (max-width: 400px){
+            font-size:16px;
+          }
+          @media screen and (min-width: 400px) and (max-width: 500px){
+            font-size:16px;
+          }
+          @media screen and (min-width: 500px) and (max-width: 768px){
+            font-size:20px;
+          }
+          @media screen and (min-width: 768px) and (max-width: 992px){
+            font-size:21px;
+          }
+          @media screen and (min-width: 992px) and (max-width: 1200px){
+            font-size: 22px;
+          }
+          @media screen and (min-width: 1200px){
+            font-size: 24px;
+          }
+        }
+        .mine-letters{
+          label{
+            input{
+              width:30px;
+              height:40px;
+              color:black;
+            }
+            input{
+              color:black;
+            }
+            @media screen and (max-width: 400px){
+              font-size:14px;
+            }
+            @media screen and (min-width: 400px) and (max-width: 500px){
+              font-size:15px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 768px){
+              font-size:16px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px){
+              font-size:17px;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1200px){
+              font-size: 18px;
+            }
+            @media screen and (min-width: 1200px){
+              font-size: 18px;
+
+            }
+          }
+          input{
+            color:black;
+          }
+        }
+      }
+    }
     .password-container{
       width:100%;
-      height: 500px;
+      height: 400px;
       .fortune-password{
         width:100%;
         .password-block{
-          background: -webkit-linear-gradient(rgba(250,250,250,0.8),rgba(100,100,100,0.2),rgba(250,250,250,0.8));
-          border: 2px solid black;
+          background: rgba(250,250,250,0.7);
+          border: 5px solid black;
+          box-shadow: 0 0 20px 7px white;
           height: 400px;
           .typed-letters{
-            position: absolute;
-            width:400px;
-            height: 300px;
-            top: calc(50% - 150px);
-            left: calc(50% - 200px);
+            @media screen and (max-width: 400px){
+              position: absolute;
+              width:270px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 135px);
+            }
+            @media screen and (min-width: 400px) and (max-width: 500px){
+              position: absolute;
+              width:260px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 130px);
+            }
+            @media screen and (min-width: 500px) and (max-width: 768px){
+              position: absolute;
+              width:300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px);
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px){
+              position: absolute;
+              width:300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px);
+            }
+            @media screen and (min-width: 992px) and (max-width: 1200px){
+              position: absolute;
+              width:300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px);
+            }
+            @media screen and (min-width: 1200px){
+              position: absolute;
+              width:300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px);
+            }
+
+            span{
+              @media screen and (max-width: 400px){
+                width:20px;
+                height: 30px;
+              }
+              @media screen and (min-width: 400px) and (max-width: 500px){
+                width:20px;
+                height: 30px;
+              }
+              @media screen and (min-width: 500px) and (max-width: 768px){
+                width:20px;
+                height: 30px;
+              }
+              @media screen and (min-width: 768px) and (max-width: 992px){
+                width:23px;
+                height: 33px;
+              }
+              @media screen and (min-width: 992px) and (max-width: 1200px){
+                width:25px;
+                height: 35px;
+              }
+              @media screen and (min-width: 1200px){
+                width:25px;
+                height: 35px;
+              }
+            }
+          }
+          .category-password{
+            letter-spacing:5px;
+            font-weight: 900;
           }
         }
       }
       .fortune-circle{
         width:100%;
+        @media screen and (max-width: 400px){
+          display:none;
+        }
+        @media screen and (min-width: 400px) and (max-width: 500px){
+          display:none;
+        }
+        @media screen and (min-width: 500px) and (max-width: 768px){
+          display:none;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px){
+          display:none;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+          display:block;
+        }
+        @media screen and (min-width: 1200px){
+          display:block;
+        }
         .button-spin{
           position: absolute;
         }
@@ -184,7 +1173,12 @@ body{
           position: absolute;
 
           img{
-            width: 100%;
+            @media screen and (min-width: 992px) and (max-width: 1200px){
+              width:100%;
+            }
+            @media screen and (min-width: 1200px){
+              width:100%;
+            }
           }
           .arrow{
             position: absolute;
@@ -193,28 +1187,247 @@ body{
             font-size: 20px;
           }
         }
-      }
-    }
-    .actualPriceBlock{
-      width:200px;
-      position: absolute;
-      left: calc(50% - 100px);
-      .actualPriceText{
-        left: calc(50% - 96px);
-        color:white;
-        font-size: 20px;
-        margin-top: 5px;
-        border: 4px solid white;
-        box-shadow: 0 20px 100px 30px rgba(250,250,250,0.3);
-        padding: 20px;
-        background: rgba(250,250,250,0.4);
-        &:hover{
-          background: rgba(250,250,250,0.9);
-          color:black;
+        .letters-div{
+          .counter-circle{
+            width:8px;
+            height:8px;
+            border-radius: 100px;
+            background: white;
+            position: absolute;
+            top:0;
+            left: 34px;
+          }
+          .counter{
+            display:block;
+            position:absolute;
+            width:80px;
+            height:80px;
+            top: calc(50% - 40px);
+            left: 10px;
+            border:2px solid white;
+            border-radius: 100px;
+
+          }
+          @include lettersParam();
+          h3{
+            @media screen and (max-width: 400px){
+              font-size:16px;
+            }
+            @media screen and (min-width: 400px) and (max-width: 500px){
+              font-size:16px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 768px){
+              font-size:20px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px){
+              font-size:21px;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1200px){
+              font-size: 22px;
+            }
+            @media screen and (min-width: 1200px){
+              font-size: 24px;
+            }
+          }
+          .mine-letters{
+            label{
+              input{
+                width:30px;
+                height:40px;
+                color:black;
+              }
+              @media screen and (max-width: 400px){
+                font-size:14px;
+              }
+              @media screen and (min-width: 400px) and (max-width: 500px){
+                font-size:15px;
+              }
+              @media screen and (min-width: 500px) and (max-width: 768px){
+                font-size:16px;
+              }
+              @media screen and (min-width: 768px) and (max-width: 992px){
+                font-size:17px;
+              }
+              @media screen and (min-width: 992px) and (max-width: 1200px){
+                font-size: 18px;
+              }
+              @media screen and (min-width: 1200px){
+                font-size: 18px;
+
+              }
+            }
+            input{
+              color:black;
+            }
+          }
         }
       }
     }
+    .actualPrize-normal{
+      margin-bottom:30px;
+      @media screen and (max-width: 400px){
+        display:none;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:none;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:none;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:none;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:block;
+      }
+      @media screen and (min-width: 1200px){
+        display:block;
+      }
+      .actualPriceBlock{
+        width:200px;
+        position: absolute;
+        left: calc(50% - 100px);
+        .actualPriceText{
+          left: calc(50% - 96px);
+          color:white;
+          font-size: 20px;
+          margin-top: 5px;
+          box-shadow: 0 20px 19px 20px rgba(10,10,10,0.8);
+          padding: 20px;
+          background: black;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+    }
+    .actualPrize-mob{
+      margin-bottom:30px;
+      @media screen and (max-width: 400px){
+        display:block;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:block;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:block;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:block;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:none;
+      }
+      @media screen and (min-width: 1200px){
+        display:none;
+      }
+      .actualPriceBlock{
+        .actualPriceText{
+          left: calc(50% - 96px);
+          color:white;
+          font-size: 20px;
+          margin-top: 5px;
+          box-shadow: 0 20px 19px 20px rgba(10,10,10,0.8);
+          padding: 20px;
+          background: rgba(10,10,10,0.98);
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+    }
+    .competitors-mobile{
+      @media screen and (max-width: 400px){
+        display:none;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:none;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:none;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:none;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display:none;
+      }
+      @media screen and (min-width: 1200px){
+        display:none;
+      }
+      padding:10px;
+      background: black;
+      border:2px solid white;
+      width:100%;
+      position: fixed;
+      bottom:0;
+      color:white;
+      .zoom-competitors{
+        position: absolute;
+        top:0;
+        right:0;
+      }
+      .player1Active{
+        color:white;
+        background: red;
+      }
+      .player2Active{
+        color:white;
+        background: blue;
+      }
+      .player3Active{
+        color:white;
+        background: green;
+      }
+      .player4Active{
+        color:white;
+        background: black;
+      }
+
+      .player1NotActive{
+        background: rgba(200,10,10,0.3);
+      }
+      .player2NotActive{
+        background: rgba(10,10,200,0.3);
+      }
+      .player3NotActive{
+        background: rgba(10,200,10,0.3);
+      }
+      .player4NotActive{
+        background: rgba(1,1,1,0.3);
+      }
+      .player1{
+        border: 4px solid red;
+      }
+      .player2{
+        border: 4px solid blue;
+      }
+      .player3{
+        border: 4px solid green;
+      }
+      .player4{
+        border: 4px solid rgba(30,30,30,1);
+      }
+
+    }
+
     .competitors{
+      @media screen and (max-width: 400px){
+        display:none;
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px){
+        display:none;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px){
+        display:none;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
+        display:none;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px){
+        display: block;
+      }
+      @media screen and (min-width: 1200px){
+        display: block;
+      }
       width:100%;
       position: fixed;
       bottom:0;
@@ -276,6 +1489,30 @@ body{
       }
 
     }
+  }
+}
+
+.competitors-open{
+  position: fixed;
+  bottom:0;
+  right:0;
+  @media screen and (max-width: 400px){
+    display: block;
+  }
+  @media screen and (min-width: 400px) and (max-width: 500px){
+    display: block;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px){
+    display: block;
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    display: block;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    display:none;
+  }
+  @media screen and (min-width: 1200px){
+    display:none;
   }
 }
 
@@ -398,6 +1635,17 @@ body{
 .discover{
   transform: rotateY(360deg);
   transition:1s all;
+}
+
+
+.firsRow{
+  background: white;
+  color:black;
+}
+
+.circle-counter-start{
+  transform: rotate(360deg);
+  transition: 1s all;
 }
 
 

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bangers|Fascinate+Inline|Monoton");
 @import url("https://fonts.googleapis.com/css?family=Bungee+Inline|Faster+One|Frijole");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
 body {
   width: 100%;
   height: 100%;
@@ -8,21 +10,461 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
+  body .statsButton {
+    z-index: 1001;
+    width: 60px;
+    height: 60px;
+    color: white;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border-bottom-right-radius: 50px; }
+    @media screen and (max-width: 400px) {
+      body .statsButton {
+        width: 40px;
+        height: 40px;
+        font-size: 20px; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .statsButton {
+        width: 40px;
+        height: 40px;
+        font-size: 22px; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .statsButton {
+        width: 45px;
+        height: 45px;
+        font-size: 24px; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .statsButton {
+        width: 50px;
+        height: 50px;
+        font-size: 26px; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .statsButton {
+        width: 55px;
+        height: 55px;
+        font-size: 28px; } }
+    @media screen and (min-width: 1200px) {
+      body .statsButton {
+        width: 60px;
+        height: 60px;
+        font-size: 30px; } }
+    body .statsButton #statsImg {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px); }
+    body .statsButton:hover {
+      transition: 1s all; }
+      @media screen and (max-width: 400px) {
+        body .statsButton:hover {
+          width: 50px;
+          height: 50px;
+          font-size: 20px; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .statsButton:hover {
+          width: 50px;
+          height: 50px;
+          font-size: 22px; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .statsButton:hover {
+          width: 55px;
+          height: 55px;
+          font-size: 24px; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .statsButton:hover {
+          width: 60px;
+          height: 60px;
+          font-size: 26px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .statsButton:hover {
+          width: 65px;
+          height: 65px;
+          font-size: 28px; } }
+      @media screen and (min-width: 1200px) {
+        body .statsButton:hover {
+          width: 70px;
+          height: 70px;
+          font-size: 30px; } }
+  body .newGameButton {
+    z-index: 1001;
+    color: white;
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    cursor: pointer;
+    border-bottom-left-radius: 50px; }
+    @media screen and (max-width: 400px) {
+      body .newGameButton {
+        width: 40px;
+        height: 40px;
+        font-size: 20px; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .newGameButton {
+        width: 40px;
+        height: 40px;
+        font-size: 22px; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .newGameButton {
+        width: 45px;
+        height: 45px;
+        font-size: 24px; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .newGameButton {
+        width: 50px;
+        height: 50px;
+        font-size: 26px; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .newGameButton {
+        width: 55px;
+        height: 55px;
+        font-size: 28px; } }
+    @media screen and (min-width: 1200px) {
+      body .newGameButton {
+        width: 60px;
+        height: 60px;
+        font-size: 30px; } }
+    body .newGameButton #newGameImg {
+      position: absolute;
+      top: calc(50% - 20px);
+      right: calc(50% - 20px); }
+    body .newGameButton:hover {
+      transition: 1s all; }
+      @media screen and (max-width: 400px) {
+        body .newGameButton:hover {
+          width: 50px;
+          height: 50px;
+          font-size: 20px; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .newGameButton:hover {
+          width: 50px;
+          height: 50px;
+          font-size: 22px; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .newGameButton:hover {
+          width: 55px;
+          height: 55px;
+          font-size: 24px; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .newGameButton:hover {
+          width: 60px;
+          height: 60px;
+          font-size: 26px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .newGameButton:hover {
+          width: 65px;
+          height: 65px;
+          font-size: 28px; } }
+      @media screen and (min-width: 1200px) {
+        body .newGameButton:hover {
+          width: 70px;
+          height: 70px;
+          font-size: 30px; } }
   body .welcome-page {
+    display: block;
     width: 100%;
     height: 100%;
     position: fixed;
     background: #000;
     z-index: 1003; }
-    body .welcome-page .welcome-text {
-      margin-top: 15%;
-      width: 100%;
-      color: white;
-      font-size: 60px; }
-    body .welcome-page .numberPlayers {
-      color: white; }
-    body .welcome-page .buttons-welcome {
-      width: 100%; }
+    body .welcome-page .welcomePageInfo {
+      text-align: center; }
+      @media screen and (max-width: 400px) {
+        body .welcome-page .welcomePageInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .welcome-page .welcomePageInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .welcome-page .welcomePageInfo {
+          position: absolute;
+          height: 230px;
+          padding: 20px;
+          width: 300px;
+          top: calc(50% - 130px);
+          left: calc(50% - 150px);
+          border: 4px solid white;
+          box-shadow: 0 0 80px 3px white; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .welcome-page .welcomePageInfo {
+          position: absolute;
+          height: 260px;
+          padding: 20px;
+          width: 400px;
+          top: calc(50% - 130px);
+          left: calc(50% - 200px);
+          border: 4px solid white;
+          box-shadow: 0 0 100px 3px white; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .welcome-page .welcomePageInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 1200px) {
+        body .welcome-page .welcomePageInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      body .welcome-page .welcomePageInfo .welcome-text {
+        font-family: 'Fredericka the Great', cursive;
+        width: 100%;
+        color: white; }
+        @media screen and (max-width: 400px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 20px;
+            margin-top: 5%; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 25px;
+            margin-top: 5%; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 30px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 40px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 50px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 1200px) {
+          body .welcome-page .welcomePageInfo .welcome-text {
+            font-size: 60px;
+            margin-top: 15%; } }
+      body .welcome-page .welcomePageInfo .numberPlayers {
+        color: white; }
+      body .welcome-page .welcomePageInfo .buttons-welcome {
+        width: 100%; }
+  body .newGame-page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    z-index: 1003; }
+    body .newGame-page .newGamePageInfo {
+      text-align: center; }
+      @media screen and (max-width: 400px) {
+        body .newGame-page .newGamePageInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .newGame-page .newGamePageInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .newGame-page .newGamePageInfo {
+          position: absolute;
+          height: 230px;
+          padding: 20px;
+          width: 300px;
+          top: calc(50% - 130px);
+          left: calc(50% - 150px);
+          border: 4px solid white;
+          box-shadow: 0 0 80px 3px white; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .newGame-page .newGamePageInfo {
+          position: absolute;
+          height: 260px;
+          padding: 20px;
+          width: 400px;
+          top: calc(50% - 130px);
+          left: calc(50% - 200px);
+          border: 4px solid white;
+          box-shadow: 0 0 100px 3px white; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .newGame-page .newGamePageInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 1200px) {
+        body .newGame-page .newGamePageInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      body .newGame-page .newGamePageInfo .newGame-text {
+        font-family: 'Fredericka the Great', cursive;
+        width: 100%;
+        color: white; }
+        @media screen and (max-width: 400px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 20px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 22px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 25px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 30px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 40px;
+            margin-top: 15%; } }
+        @media screen and (min-width: 1200px) {
+          body .newGame-page .newGamePageInfo .newGame-text {
+            font-size: 40px;
+            margin-top: 15%; } }
+  body .winnerRoundsPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    z-index: 1003; }
+    body .winnerRoundsPage .winnerRoundsInfo {
+      text-align: center; }
+      @media screen and (max-width: 400px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 20px;
+          margin-top: 5%; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 25px;
+          margin-top: 5%; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 30px;
+          margin-top: 15%; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 40px;
+          margin-top: 15%; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 50px;
+          margin-top: 15%; } }
+      @media screen and (min-width: 1200px) {
+        body .winnerRoundsPage .winnerRoundsInfo p {
+          font-size: 60px;
+          margin-top: 15%; } }
+      @media screen and (max-width: 400px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          height: 200px;
+          padding: 10px;
+          position: fixed;
+          width: 100%;
+          top: calc(50% - 100px);
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          position: absolute;
+          height: 230px;
+          padding: 20px;
+          width: 300px;
+          top: calc(50% - 130px);
+          left: calc(50% - 150px);
+          border: 4px solid white;
+          box-shadow: 0 0 80px 3px white; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          position: absolute;
+          height: 260px;
+          padding: 20px;
+          width: 400px;
+          top: calc(50% - 130px);
+          left: calc(50% - 200px);
+          border: 4px solid white;
+          box-shadow: 0 0 100px 3px white; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      @media screen and (min-width: 1200px) {
+        body .winnerRoundsPage .winnerRoundsInfo {
+          position: absolute;
+          height: 340px;
+          padding: 20px;
+          width: 600px;
+          top: calc(50% - 170px);
+          left: calc(50% - 300px);
+          border: 4px solid white;
+          box-shadow: 0 0 120px 3px white; } }
+      body .winnerRoundsPage .winnerRoundsInfo .winnerStats {
+        color: white;
+        font-family: 'Fredericka the Great', cursive; }
+        @media screen and (max-width: 400px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 17px; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 21px; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 24px; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 26px; } }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 28px; } }
+        @media screen and (min-width: 1200px) {
+          body .winnerRoundsPage .winnerRoundsInfo .winnerStats h2 {
+            font-size: 30px; } }
+    body .winnerRoundsPage .new_game {
+      display: none; }
   body .guess-password-site {
     width: 100%;
     height: 100%;
@@ -102,27 +544,250 @@ body {
       color: white;
       font-size: 30px;
       cursor: pointer; }
-    body .buy-site .buy-panel {
-      margin: 20% 20%; }
-  body .site-title {
-    font-size: 65px;
-    color: white;
-    letter-spacing: 6px;
+    @media screen and (max-width: 400px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 140px;
+        width: 100%;
+        top: calc(50% - 70px);
+        position: relative; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 140px;
+        width: 100%;
+        top: calc(50% - 70px);
+        position: relative; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 160px;
+        width: 100%;
+        top: calc(50% - 80px);
+        position: relative; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 200px;
+        width: 100%;
+        top: calc(50% - 100px);
+        position: relative; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 200px;
+        width: 100%;
+        top: calc(50% - 100px);
+        position: relative; } }
+    @media screen and (min-width: 1200px) {
+      body .buy-site .buy-panel .panel-buy {
+        height: 200px;
+        width: 100%;
+        top: calc(50% - 100px);
+        position: relative; } }
+    @media screen and (max-width: 400px) {
+      body .buy-site .buy-panel {
+        height: 200px;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .buy-site .buy-panel {
+        height: 200px;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: calc(50% - 100px);
+        box-shadow: 0 0 120px 3px white; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .buy-site .buy-panel {
+        position: absolute;
+        height: 230px;
+        padding: 20px;
+        width: 300px;
+        top: calc(50% - 130px);
+        left: calc(50% - 150px);
+        border: 4px solid white;
+        box-shadow: 0 0 80px 3px white; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .buy-site .buy-panel {
+        position: absolute;
+        height: 260px;
+        padding: 20px;
+        width: 400px;
+        top: calc(50% - 130px);
+        left: calc(50% - 200px);
+        border: 4px solid white;
+        box-shadow: 0 0 100px 3px white; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .buy-site .buy-panel {
+        position: absolute;
+        height: 340px;
+        padding: 20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white; } }
+    @media screen and (min-width: 1200px) {
+      body .buy-site .buy-panel {
+        position: absolute;
+        height: 340px;
+        padding: 20px;
+        width: 600px;
+        top: calc(50% - 170px);
+        left: calc(50% - 300px);
+        border: 4px solid white;
+        box-shadow: 0 0 120px 3px white; } }
+  body .statsPage {
     width: 100%;
-    height: 20%;
-    font-family: 'Frijole', cursive;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    z-index: 1003;
+    display: none;
+    color: white; }
+    body .statsPage .statsHeader {
+      font-family: 'Fredericka the Great', cursive; }
+      @media screen and (max-width: 400px) {
+        body .statsPage .statsHeader {
+          font-size: 25px;
+          letter-spacing: 1px; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .statsPage .statsHeader {
+          font-size: 25px;
+          letter-spacing: 1px; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .statsPage .statsHeader {
+          font-size: 37px;
+          letter-spacing: 6px; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .statsPage .statsHeader {
+          font-size: 45px;
+          letter-spacing: 6px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .statsPage .statsHeader {
+          font-size: 60px;
+          letter-spacing: 6px; } }
+      @media screen and (min-width: 1200px) {
+        body .statsPage .statsHeader {
+          font-size: 65px;
+          letter-spacing: 14px; } }
+    body .statsPage #closeStats {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer; }
+    body .statsPage .player-stats {
+      margin-top: 100px;
+      margin-bottom: 100px; }
+  body .site-title {
+    position: absolute;
+    color: white;
+    width: 100%;
+    font-family: 'Fredericka the Great', cursive;
     text-transform: uppercase; }
+    body .site-title .site-title-text {
+      position: absolute;
+      background: rgba(10, 10, 10, 0.5);
+      box-shadow: 0 2px 20px 1px white;
+      padding: 10px;
+      border-bottom-right-radius: 120px;
+      border-bottom-left-radius: 120px; }
+      @media screen and (max-width: 400px) {
+        body .site-title .site-title-text {
+          width: 300px;
+          left: calc(50% - 150px); } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .site-title .site-title-text {
+          width: 300px;
+          left: calc(50% - 150px); } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .site-title .site-title-text {
+          width: 500px;
+          left: calc(50% - 250px); } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .site-title .site-title-text {
+          width: 550px;
+          left: calc(50% - 275px); } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .site-title .site-title-text {
+          width: 700px;
+          left: calc(50% - 350px); } }
+      @media screen and (min-width: 1200px) {
+        body .site-title .site-title-text {
+          width: 800px;
+          left: calc(50% - 400px); } }
+    @media screen and (max-width: 400px) {
+      body .site-title {
+        font-size: 25px;
+        letter-spacing: 1px; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .site-title {
+        font-size: 25px;
+        letter-spacing: 1px; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .site-title {
+        font-size: 37px;
+        letter-spacing: 6px; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .site-title {
+        font-size: 45px;
+        letter-spacing: 6px; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .site-title {
+        font-size: 60px;
+        letter-spacing: 6px; } }
+    @media screen and (min-width: 1200px) {
+      body .site-title {
+        font-size: 65px;
+        letter-spacing: 14px; } }
   body .container-mine {
     position: absolute;
     width: 100%; }
+    @media screen and (max-width: 400px) {
+      body .container-mine {
+        padding-top: 100px; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .container-mine {
+        padding-top: 100px; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .container-mine {
+        padding-top: 100px; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .container-mine {
+        padding-top: 100px; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .container-mine {
+        padding-top: 180px; } }
+    @media screen and (min-width: 1200px) {
+      body .container-mine {
+        padding-top: 180px; } }
     body .container-mine .managing-panel {
       position: absolute;
       width: 150px;
-      top: 0;
+      top: 150px;
       right: 0;
       background: rgba(250, 250, 250, 0.6);
       z-index: 1001;
       padding: 10px; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .managing-panel {
+          display: none; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .managing-panel {
+          display: none; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .managing-panel {
+          display: none; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .managing-panel {
+          display: none; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .managing-panel {
+          display: block; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .managing-panel {
+          display: block; } }
       body .container-mine .managing-panel .btn-circle {
         border: 2px solid blue;
         font-family: 'Bangers', cursive;
@@ -138,57 +803,562 @@ body {
         z-index: 1002; }
       body .container-mine .managing-panel .btn-check {
         margin: 5px; }
+    body .container-mine .managing-panel-mobile {
+      display: block; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .managing-panel-mobile {
+          display: block; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .managing-panel-mobile {
+          display: block; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .managing-panel-mobile {
+          display: block; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .managing-panel-mobile {
+          display: block; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .managing-panel-mobile {
+          display: none; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .managing-panel-mobile {
+          display: none; } }
+      body .container-mine .managing-panel-mobile .btn-group {
+        width: 100%; }
+        @media screen and (max-width: 400px) {
+          body .container-mine .managing-panel-mobile .btn-group button {
+            font-size: 12px; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .container-mine .managing-panel-mobile .btn-group button {
+            font-size: 13px; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .container-mine .managing-panel-mobile .btn-group button {
+            font-size: 14px; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .container-mine .managing-panel-mobile .btn-group button {
+            font-size: 14px; } }
+        @media screen and (max-width: 400px) {
+          body .container-mine .managing-panel-mobile .btn-group {
+            width: 314px; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .container-mine .managing-panel-mobile .btn-group {
+            width: 331px; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .container-mine .managing-panel-mobile .btn-group {
+            width: 349px; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .container-mine .managing-panel-mobile .btn-group {
+            width: 349px; } }
+    @media screen and (max-width: 400px) {
+      body .container-mine .fortune-circle-mob {
+        display: block; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .container-mine .fortune-circle-mob {
+        display: block; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .container-mine .fortune-circle-mob {
+        display: block; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .container-mine .fortune-circle-mob {
+        display: block; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .container-mine .fortune-circle-mob {
+        display: none; } }
+    @media screen and (min-width: 1200px) {
+      body .container-mine .fortune-circle-mob {
+        display: none; } }
+    body .container-mine .fortune-circle-mob .button-spin {
+      position: absolute; }
+    @media screen and (max-width: 400px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 80%; } }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 80%; } }
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 60%; } }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 50%; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 100%; } }
+    @media screen and (min-width: 1200px) {
+      body .container-mine .fortune-circle-mob .circle-fortune img {
+        width: 80%; } }
+    body .container-mine .fortune-circle-mob .circle-fortune .arrow {
+      position: absolute;
+      top: -20px;
+      left: calc(50% - 10px);
+      font-size: 20px; }
+    body .container-mine .fortune-circle-mob .letters-div {
+      position: absolute;
+      background: black;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 5px;
+      display: none; }
+      body .container-mine .fortune-circle-mob .letters-div .counter-circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 100px;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 34px; }
+      body .container-mine .fortune-circle-mob .letters-div .counter {
+        display: block;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: calc(50% - 40px);
+        left: 10px;
+        border: 2px solid white;
+        border-radius: 100px; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 350px;
+          height: 234px;
+          top: calc(50% - 125px);
+          left: calc(50% - 175px); } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 400px;
+          height: 240px;
+          top: calc(50% - 120px);
+          left: calc(50% - 200px); } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 440px;
+          height: 250px;
+          top: calc(50% - 125px);
+          left: calc(50% - 220px); } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 460px;
+          height: 250px;
+          top: calc(50% - 125px);
+          left: calc(50% - 230px); } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 460px;
+          height: 240px;
+          top: calc(50% + 80px);
+          left: calc(50% - 230px); } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div {
+          width: 600px;
+          height: 250px;
+          left: calc(50% - 300px);
+          top: calc(50% + 80px); } }
+      @media screen and (max-width: 400px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 16px; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 16px; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 20px; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 21px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 22px; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div h3 {
+          font-size: 24px; } }
+      body .container-mine .fortune-circle-mob .letters-div .mine-letters label input {
+        width: 30px;
+        height: 40px;
+        color: black; }
+      body .container-mine .fortune-circle-mob .letters-div .mine-letters label input {
+        color: black; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 14px; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 15px; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 16px; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 17px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 18px; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .fortune-circle-mob .letters-div .mine-letters label {
+          font-size: 18px; } }
+      body .container-mine .fortune-circle-mob .letters-div .mine-letters input {
+        color: black; }
     body .container-mine .password-container {
       width: 100%;
-      height: 500px; }
+      height: 400px; }
       body .container-mine .password-container .fortune-password {
         width: 100%; }
         body .container-mine .password-container .fortune-password .password-block {
-          background: -webkit-linear-gradient(rgba(250, 250, 250, 0.8), rgba(100, 100, 100, 0.2), rgba(250, 250, 250, 0.8));
-          border: 2px solid black;
+          background: rgba(250, 250, 250, 0.7);
+          border: 5px solid black;
+          box-shadow: 0 0 20px 7px white;
           height: 400px; }
-          body .container-mine .password-container .fortune-password .password-block .typed-letters {
-            position: absolute;
-            width: 400px;
-            height: 300px;
-            top: calc(50% - 150px);
-            left: calc(50% - 200px); }
+          @media screen and (max-width: 400px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 270px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 135px); } }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 260px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 130px); } }
+          @media screen and (min-width: 500px) and (max-width: 768px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px); } }
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px); } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px); } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters {
+              position: absolute;
+              width: 300px;
+              height: 300px;
+              top: calc(50% - 150px);
+              left: calc(50% - 150px); } }
+          @media screen and (max-width: 400px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 20px;
+              height: 30px; } }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 20px;
+              height: 30px; } }
+          @media screen and (min-width: 500px) and (max-width: 768px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 20px;
+              height: 30px; } }
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 23px;
+              height: 33px; } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 25px;
+              height: 35px; } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-password .password-block .typed-letters span {
+              width: 25px;
+              height: 35px; } }
+          body .container-mine .password-container .fortune-password .password-block .category-password {
+            letter-spacing: 5px;
+            font-weight: 900; }
       body .container-mine .password-container .fortune-circle {
         width: 100%; }
+        @media screen and (max-width: 400px) {
+          body .container-mine .password-container .fortune-circle {
+            display: none; } }
+        @media screen and (min-width: 400px) and (max-width: 500px) {
+          body .container-mine .password-container .fortune-circle {
+            display: none; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          body .container-mine .password-container .fortune-circle {
+            display: none; } }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          body .container-mine .password-container .fortune-circle {
+            display: none; } }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          body .container-mine .password-container .fortune-circle {
+            display: block; } }
+        @media screen and (min-width: 1200px) {
+          body .container-mine .password-container .fortune-circle {
+            display: block; } }
         body .container-mine .password-container .fortune-circle .button-spin {
           position: absolute; }
         body .container-mine .password-container .fortune-circle .circle-fortune {
           width: 100%;
           position: absolute; }
-          body .container-mine .password-container .fortune-circle .circle-fortune img {
-            width: 100%; }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .circle-fortune img {
+              width: 100%; } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .circle-fortune img {
+              width: 100%; } }
           body .container-mine .password-container .fortune-circle .circle-fortune .arrow {
             position: absolute;
             top: -20px;
             left: calc(50% - 10px);
             font-size: 20px; }
-    body .container-mine .actualPriceBlock {
-      width: 200px;
-      position: absolute;
-      left: calc(50% - 100px); }
-      body .container-mine .actualPriceBlock .actualPriceText {
+        body .container-mine .password-container .fortune-circle .letters-div {
+          position: absolute;
+          background: black;
+          color: white;
+          padding: 5px 20px;
+          border-radius: 5px;
+          display: none; }
+          body .container-mine .password-container .fortune-circle .letters-div .counter-circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 100px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 34px; }
+          body .container-mine .password-container .fortune-circle .letters-div .counter {
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: calc(50% - 40px);
+            left: 10px;
+            border: 2px solid white;
+            border-radius: 100px; }
+          @media screen and (max-width: 400px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 350px;
+              height: 234px;
+              top: calc(50% - 125px);
+              left: calc(50% - 175px); } }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 400px;
+              height: 240px;
+              top: calc(50% - 120px);
+              left: calc(50% - 200px); } }
+          @media screen and (min-width: 500px) and (max-width: 768px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 440px;
+              height: 250px;
+              top: calc(50% - 125px);
+              left: calc(50% - 220px); } }
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 460px;
+              height: 250px;
+              top: calc(50% - 125px);
+              left: calc(50% - 230px); } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 460px;
+              height: 240px;
+              top: calc(50% + 80px);
+              left: calc(50% - 230px); } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div {
+              width: 600px;
+              height: 250px;
+              left: calc(50% - 300px);
+              top: calc(50% + 80px); } }
+          @media screen and (max-width: 400px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 16px; } }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 16px; } }
+          @media screen and (min-width: 500px) and (max-width: 768px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 20px; } }
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 21px; } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 22px; } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div h3 {
+              font-size: 24px; } }
+          body .container-mine .password-container .fortune-circle .letters-div .mine-letters label input {
+            width: 30px;
+            height: 40px;
+            color: black; }
+          @media screen and (max-width: 400px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 14px; } }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 15px; } }
+          @media screen and (min-width: 500px) and (max-width: 768px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 16px; } }
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 17px; } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 18px; } }
+          @media screen and (min-width: 1200px) {
+            body .container-mine .password-container .fortune-circle .letters-div .mine-letters label {
+              font-size: 18px; } }
+          body .container-mine .password-container .fortune-circle .letters-div .mine-letters input {
+            color: black; }
+    body .container-mine .actualPrize-normal {
+      margin-bottom: 30px; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .actualPrize-normal {
+          display: none; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .actualPrize-normal {
+          display: none; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .actualPrize-normal {
+          display: none; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .actualPrize-normal {
+          display: none; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .actualPrize-normal {
+          display: block; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .actualPrize-normal {
+          display: block; } }
+      body .container-mine .actualPrize-normal .actualPriceBlock {
+        width: 200px;
+        position: absolute;
+        left: calc(50% - 100px); }
+        body .container-mine .actualPrize-normal .actualPriceBlock .actualPriceText {
+          left: calc(50% - 96px);
+          color: white;
+          font-size: 20px;
+          margin-top: 5px;
+          box-shadow: 0 20px 19px 20px rgba(10, 10, 10, 0.8);
+          padding: 20px;
+          background: black;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px; }
+    body .container-mine .actualPrize-mob {
+      margin-bottom: 30px; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .actualPrize-mob {
+          display: block; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .actualPrize-mob {
+          display: block; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .actualPrize-mob {
+          display: block; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .actualPrize-mob {
+          display: block; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .actualPrize-mob {
+          display: none; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .actualPrize-mob {
+          display: none; } }
+      body .container-mine .actualPrize-mob .actualPriceBlock .actualPriceText {
         left: calc(50% - 96px);
         color: white;
         font-size: 20px;
         margin-top: 5px;
-        border: 4px solid white;
-        box-shadow: 0 20px 100px 30px rgba(250, 250, 250, 0.3);
+        box-shadow: 0 20px 19px 20px rgba(10, 10, 10, 0.8);
         padding: 20px;
-        background: rgba(250, 250, 250, 0.4); }
-        body .container-mine .actualPriceBlock .actualPriceText:hover {
-          background: rgba(250, 250, 250, 0.9);
-          color: black; }
+        background: rgba(10, 10, 10, 0.98);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px; }
+    body .container-mine .competitors-mobile {
+      padding: 10px;
+      background: black;
+      border: 2px solid white;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      color: white; }
+      @media screen and (max-width: 400px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .competitors-mobile {
+          display: none; } }
+      body .container-mine .competitors-mobile .zoom-competitors {
+        position: absolute;
+        top: 0;
+        right: 0; }
+      body .container-mine .competitors-mobile .player1Active {
+        color: white;
+        background: red; }
+      body .container-mine .competitors-mobile .player2Active {
+        color: white;
+        background: blue; }
+      body .container-mine .competitors-mobile .player3Active {
+        color: white;
+        background: green; }
+      body .container-mine .competitors-mobile .player4Active {
+        color: white;
+        background: black; }
+      body .container-mine .competitors-mobile .player1NotActive {
+        background: rgba(200, 10, 10, 0.3); }
+      body .container-mine .competitors-mobile .player2NotActive {
+        background: rgba(10, 10, 200, 0.3); }
+      body .container-mine .competitors-mobile .player3NotActive {
+        background: rgba(10, 200, 10, 0.3); }
+      body .container-mine .competitors-mobile .player4NotActive {
+        background: rgba(1, 1, 1, 0.3); }
+      body .container-mine .competitors-mobile .player1 {
+        border: 4px solid red; }
+      body .container-mine .competitors-mobile .player2 {
+        border: 4px solid blue; }
+      body .container-mine .competitors-mobile .player3 {
+        border: 4px solid green; }
+      body .container-mine .competitors-mobile .player4 {
+        border: 4px solid #1e1e1e; }
     body .container-mine .competitors {
       width: 100%;
       position: fixed;
       bottom: 0;
       color: white;
       /*background: rgba(250,250,250,0.7);*/ }
+      @media screen and (max-width: 400px) {
+        body .container-mine .competitors {
+          display: none; } }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        body .container-mine .competitors {
+          display: none; } }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        body .container-mine .competitors {
+          display: none; } }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        body .container-mine .competitors {
+          display: none; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body .container-mine .competitors {
+          display: block; } }
+      @media screen and (min-width: 1200px) {
+        body .container-mine .competitors {
+          display: block; } }
       body .container-mine .competitors .zoom-competitors {
         position: absolute;
         top: 0;
@@ -229,6 +1399,29 @@ body {
         border: 4px solid black;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px; }
+
+.competitors-open {
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+  @media screen and (max-width: 400px) {
+    .competitors-open {
+      display: block; } }
+  @media screen and (min-width: 400px) and (max-width: 500px) {
+    .competitors-open {
+      display: block; } }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    .competitors-open {
+      display: block; } }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .competitors-open {
+      display: block; } }
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .competitors-open {
+      display: none; } }
+  @media screen and (min-width: 1200px) {
+    .competitors-open {
+      display: none; } }
 
 .square {
   width: 25px;
@@ -345,4 +1538,12 @@ body {
 
 .discover {
   transform: rotateY(360deg);
+  transition: 1s all; }
+
+.firsRow {
+  background: white;
+  color: black; }
+
+.circle-counter-start {
+  transform: rotate(360deg);
   transition: 1s all; }

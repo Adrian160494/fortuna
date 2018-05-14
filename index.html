@@ -14,19 +14,124 @@
     <title>Koło fortuny</title>
 </head>
 <body ng-controller="mainController">
-    <div id="statsPage">
-        <div class="container">
-
+    <button class="statsButton" ng-click="openStats()">
+        <span id="statsImg" class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+    <button class="newGameButton" ng-click="openNewGame()">
+        <span id="newGameImg" class="glyphicon glyphicon-new-window"></span>
+    </button>
+    <div class="statsPage">
+        <span id="closeStats" class="glyphicon glyphicon-remove" ng-click="closeStats()"></span>
+        <div class="container text-center">
+            <div class="statsHeader">
+                <h2>Statystyki Runda {{numberRound}} </h2>
+            </div>
+            <hr>
+            <div id="player-stats" class="player-stats">
+                <div ng-show="numberOfPlayers == 1 ? true : false">
+                    <div class="playerStat">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player1</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player1.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player1.material}}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div ng-show="numberOfPlayers == 2 ? true : false">
+                    <div class="playerStat">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player1</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player1.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player1.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player2</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player2.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player2.material}}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div ng-show="numberOfPlayers == 3 ? true : false">
+                    <div class="playerStat">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player1</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player1.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player1.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player2</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player2.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player2.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player3</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player3.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player3.material}}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div ng-show="numberOfPlayers == 4 ? true : false">
+                    <div class="playerStat">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player1</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player1.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player1.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player2</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player2.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player2.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player3</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player3.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player3.material}}</td></tr>
+                            <tr></tr>
+                            <tr><td class="firsRow">Statystyka</td><td class="firsRow">Player4</td></tr>
+                            <tr><td>Pieniądze</td><td>{{playerStats.player4.money}}</td></tr>
+                            <tr><td>Nagrody</td><td>{{playerStats.player4.material}}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="newGamePage" class="newGame-page text-center">
+        <div class="newGamePageInfo">
+            <p class="newGame-text text-center">Czy chcesz rozpocząć nową gre??</p>
+            <div class="button-newGame">
+                <button class="btn btn-success" ng-click="newGame()">Tak</button>
+                <button class="btn btn-default" ng-click="closeNewGame()">Nie</button>
+            </div>
         </div>
     </div>
     <div id="welcomePage" class="welcome-page text-center">
-        <p class="welcome-text text-center">Rozpocznij gre!!</p>
-        <p class="numberPlayers">Wybierz ilość graczy:</p>
-        <div class="buttons-welcome text-center">
-            <button class="btn btn-default" ng-click="choosePlayer(1)">1 player</button>
-            <button class="btn btn-default" ng-click="choosePlayer(2)">2 player</button>
-            <button class="btn btn-default" ng-click="choosePlayer(3)">3 player</button>
-            <button class="btn btn-default" ng-click="choosePlayer(4)">4 player</button>
+        <div class="welcomePageInfo">
+            <p class="welcome-text text-center">Rozpocznij gre!!</p>
+            <p class="numberPlayers">Wybierz ilość graczy:</p>
+            <div class="buttons-welcome text-center">
+                <button class="btn btn-default" ng-click="choosePlayer(1)">1</button>
+                <button class="btn btn-default" ng-click="choosePlayer(2)">2</button>
+                <button class="btn btn-default" ng-click="choosePlayer(3)">3</button>
+                <button class="btn btn-default" ng-click="choosePlayer(4)">4</button>
+            </div>
+        </div>
+    </div>
+    <div id="winnerRoundsPage" class="winnerRoundsPage text-center">
+        <div class="winnerRoundsInfo">
+            <div class="winnerStats">
+                <p>Wygrywa {{playerWinners}}</p>
+                <div class="winnerStatsText text-center"></div>
+            </div>
+            <div class="new_game text-center">
+                <a href="/"><button class="btn btn-success">Nowa Gra</button></a>
+            </div>
+            <div class="final_game text-center">
+                <button class="btn btn-default" ng-click="startFinal()">Zacznij finał!</button>
+            </div>
         </div>
     </div>
     <div id="guess-password-site" class="guess-password-site">
@@ -57,20 +162,21 @@
     <div class="buy-site">
         <span id="closeBuy" class="glyphicon glyphicon-remove" ng-click="closeBuy()"></span>
         <div class="buy-panel">
-            <div class="panel">
+            <div class="panel panel-buy">
                 <div class="panel-heading">
                     <p>Czy chcesz kupic samogłoske za 200 zł?</p>
                 </div>
                 <div class="panel-body">
                     <input type="text" class="form-control" id="bought-letter"/>
-                    <button class="btn btn-default btn-block" ng-click="checkBuyLetter()">Sprawdz</button>
+                    <button class=" btn btn-default btn-block" ng-click="checkBuyLetter()">Sprawdz</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="site-title text-center">
-        <p>Koło fortuny</p>
-        <hr>
+        <div class="site-title-text">
+            <p>Koło fortuny</p>
+        </div>
     </div>
    <div class="container-mine">
 
@@ -82,49 +188,146 @@
            <p><input id="letter" type="text" class="text-center form-control input-letter" placeholder="Letter" /></p>
            <hr>
        </div>
-       <div class="col-md-12">
+       <div class="managing-panel-mobile text-center">
+          <div class="btn-group text-center">
+              <button id="spin-mob" class="btn btn-primary " ng-click="circle()">Spin</button>
+              <button id="check-mob" class="btn btn-primary"  ng-click="checkLetter()">Sprawdz</button>
+              <button class="btn btn-primary" ng-click="guessPassword()">Zgaduje hasło</button>
+              <button class="btn btn-primary" ng-click="buyLetter()">Samogłoska</button>
+              <input id="letter-mob" type="text" class="text-center form-control input-letter" placeholder="Letter" />
+          </div>
+           <hr>
+       </div>
+       <div class="col-sm-12 col-xs-12">
+           <div class="fortune-circle-mob">
+               <div class="circle-fortune circle2 text-center">
+                   <div class="col-md-8 col-xs-12 col-sm-12">
+                       <span style="color:white;" class="glyphicon glyphicon-arrow-down arrow"></span>
+                       <img id="circleFortune-mob" src="img/kolo.png" />
+                   </div>
+               </div>
+               <div class="letters-div text-center">
+                   <div class="counter">
+                       <h1>{{counter}}</h1>
+                       <div class="counter-circle"></div>
+                   </div>
+                   <h3>Stały zestaw liter: R S T L i samogłoska E!</h3>
+                   <div class="mine-letters">
+                       <div class="row">
+                           <label>Spółgłoski:
+                               <input type="text" id="spółgłoska1-mob"/>
+                               <input type="text" id="spółgłoska2-mob"/>
+                               <input type="text" id="spółgłoska3-mob"/>
+                           </label>
+                       </div>
+                       <div class="row">
+                           <label>Samogłoska:
+                               <input type="text" id="samogłoska1-mob"/>
+                           </label>
+                       </div>
+                       <div class="row">
+                           <button class="myletterButton btn btn-default" ng-click="checkYourLetters()">Sprawdz litery!</button>
+                       </div>
+                       <div class="row">
+                           <input type="text" id="final-password-mob" class="btn-block"/>
+                           <button class="btn btn-default" ng-click="checkFinalPassword()">Sprawdz!</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-12 col-xs-12 col-sm-12">
           <div class="password-container">
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-sm-12">
                   <div class="fortune-password text-center">
                       <div class="password-block">
 
                       </div>
                   </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-12 col-xs-12">
                   <div class="fortune-circle">
-                      <div class="circle-fortune text-center">
-                          <div class="col-md-8">
+                      <div class="circle-fortune circle1 text-center">
+                          <div class="col-md-8 col-sm-12 col-xs-12">
                               <span style="color:white;" class="glyphicon glyphicon-arrow-down arrow"></span>
-                              <img id="circleFortune" src="img/kolo.png" width="20%"/>
+                              <img id="circleFortune" src="img/kolo.png" />
+                          </div>
+                      </div>
+                      <div class="letters-div text-center">
+                          <div class="counter">
+                              <h1>{{counter}}</h1>
+                              <div class="counter-circle"></div>
+                          </div>
+                          <h3>Stały zestaw liter: R S T L i samogłoska E!</h3>
+                          <div class="mine-letters">
+                              <div class="row">
+                                  <label>Spółgłoski:
+                                      <input type="text" id="spółgłoska1"/>
+                                      <input type="text" id="spółgłoska2"/>
+                                      <input type="text" id="spółgłoska3"/>
+                                  </label>
+                              </div>
+                              <div class="row">
+                                  <label>Samogłoska:
+                                      <input type="text" id="samogłoska1"/>
+                                  </label>
+                              </div>
+                              <div class="row">
+                                  <button class="myletterButton btn btn-default" ng-click="checkYourLetters()">Sprawdz litery!</button>
+                              </div>
+                              <div class="row">
+                                  <input type="text" id="final-password" class="btn-block"/>
+                                  <button class="btn btn-default" ng-click="checkFinalPassword()">Sprawdz!</button>
+                              </div>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
-           <div class="col-md-12">
-               <div class="col-md-6">
+           <div class="col-md-12 col-xs-12 col-sm-12 actualPrize-normal">
+               <div class="col-md-6 col-xs-12 col-sm-12">
+                   <div class="actualPriceBlock">
+                       <p class="actualPriceText text-center">{{actualPrice}}</p>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-12 col-xs-12 col-sm-12 actualPrize-mob">
+               <div class="col-md-6 col-xs-12 col-sm-12">
                    <div class="actualPriceBlock">
                        <p class="actualPriceText text-center">{{actualPrice}}</p>
                    </div>
                </div>
            </div>
        </div>
-
-       <div id="competitors" class="competitors">
-            <div ng-show="numberOfPlayers == 1 ? true : false">
-                <div class="col-md-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}} zł , Nagrody: {{player1Avard.material}}</div></div>';
-            </div>
+       <div id="competitors-mobile" class="competitors-mobile">
+           <div ng-show="numberOfPlayers == 1 ? true : false">
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}} zł , Nagrody: {{player1Avard.material}}</div></div>
+           </div>
            <div ng-show="numberOfPlayers == 2 ? true : false">
-               <div class="col-md-12"><div class="col-md-6"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-6"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div></div>
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-12 col-xs-12 col-sm-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div></div>
            </div>
            <div ng-show="numberOfPlayers == 3 ? true : false">
-               <div class="col-md-12"><div class="col-md-4"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-4"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-4"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div></div>
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-12 col-xs-12 col-sm-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div></div>
            </div>
            <div ng-show="numberOfPlayers == 4 ? true : false">
-               <div class="col-md-12"><div class="col-md-3"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-3"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-3"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div><div class="col-md-3"><div class="player4 text-center">Player4 Pieniądze: {{player4Avard.money}}  zł , Nagrody: {{player4Avard.material}}</div></div></div>
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-12 col-xs-12 col-sm-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div><div class="col-md-12 col-xs-12 col-sm-12"><div class="player4 text-center">Player4 Pieniądze: {{player4Avard.money}}  zł , Nagrody: {{player4Avard.material}}</div></div></div>
            </div>
        </div>
+       <div id="competitors" class="competitors">
+            <div ng-show="numberOfPlayers == 1 ? true : false">
+                <div class="col-md-12 col-xs-12 col-sm-12"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}} zł , Nagrody: {{player1Avard.material}}</div></div>
+            </div>
+           <div ng-show="numberOfPlayers == 2 ? true : false">
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-6 col-sm-6 col-xs-6"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-6 col-sm-6 col-xs-6"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div></div>
+           </div>
+           <div ng-show="numberOfPlayers == 3 ? true : false">
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-4 col-sm-4 col-xs-4"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-4 col-sm-4 col-xs-4"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-4 col-sm-4 col-xs-4"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div></div>
+           </div>
+           <div ng-show="numberOfPlayers == 4 ? true : false">
+               <div class="col-md-12 col-xs-12 col-sm-12"><div class="col-md-3 col-sm-3 col-xs-3"><div class="player1 text-center">Player1 Pieniądze: {{player1Avard.money}}  zł , Nagrody: {{player1Avard.material}}</div></div><div class="col-md-3 col-sm-3 col-xs-3"><div class="player2 text-center">Player2 Pieniądze: {{player2Avard.money}}  zł , Nagrody: {{player2Avard.material}}</div></div><div class="col-md-3 col-sm-3 col-xs-3"><div class="player3 text-center">Player3 Pieniądze: {{player3Avard.money}}  zł , Nagrody: {{player3Avard.material}}</div></div><div class="col-md-3 col-sm-3 col-xs-3"><div class="player4 text-center">Player4 Pieniądze: {{player4Avard.money}}  zł , Nagrody: {{player4Avard.material}}</div></div></div>
+           </div>
+       </div>
+       <button class="competitors-open btn btn-default" ng-click="openCloseCompetitors()"><span class="glyphicon glyphicon-menu-hamburger"></span> </button>
    </div>
 </body>
 </html>
